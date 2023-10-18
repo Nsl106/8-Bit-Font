@@ -60,6 +60,6 @@ def generateExamples(characters, ligatures, charactersByCodepoint):
 		output = 5 * " " + ''.join(map(lambda codepoint: chr(codepoint), ligature['sequence']))
 		ligatureOutput += "\n" + start + "->" + output
 
-	f = open("../examples/glyphs.txt", "w")
+	f = open("../examples/glyphs.txt", "w", encoding="utf8")
 	f.write(characterOutput + 2*"\n" + ligatureOutput)
 	f.close()

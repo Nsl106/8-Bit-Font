@@ -616,9 +616,9 @@ def checkPoly(poly):
 # Testing
 def runTest():
     import json
-    characters = json.load(open("./characters.json"))
-    diacritics = json.load(open("./diacritics.json"))
-    ligatures = json.load(open("./ligatures.json"))
+    characters = json.load(open("./characters.json", encoding="utf8"))
+    diacritics = json.load(open("./diacritics.json", encoding="utf8"))
+    ligatures = json.load(open("./ligatures.json", encoding="utf8"))
 
     for v in characters:
         if 'pixels' not in v:
