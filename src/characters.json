@@ -414,7 +414,7 @@
 			[0, 1],
 			[1, 0]
 		],
-		"descent": 1
+		"descent": 2
 	},
 	{
 		"character": "<",
