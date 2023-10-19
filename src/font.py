@@ -1,18 +1,3 @@
-# Monocraft, a monospaced font for developers who like Minecraft a bit too much.
-# Copyright (C) 2022-2023 Idrees Hassan
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-
 import json
 import math
 import os
@@ -28,38 +13,38 @@ characters = json.load(open("./characters.json", encoding="utf8"))
 charactersByCodepoint = {}
 
 def generateFont():
-    monocraft = fontforge.font()
-    monocraft.fontname = "Monocraft"
-    monocraft.familyname = "Monocraft"
-    monocraft.fullname = "Monocraft"
-    monocraft.copyright = "Idrees Hassan, https://github.com/IdreesInc/Monocraft"
-    monocraft.encoding = "UnicodeFull"
-    monocraft.version = "3.0"
-    monocraft.weight = "Regular"
-    monocraft.em = 1050
-    monocraft.ascent = 750
-    monocraft.descent = 300
-    monocraft.upos = -PIXEL_SIZE  # Underline position
-    monocraft.addLookup("ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),))
-    monocraft.addLookupSubtable("ligatures", "ligatures-subtable")
+    font = fontforge.font()
+    font.fontname = "8-Bit"
+    font.familyname = "8-Bit"
+    font.fullname = "8-Bit"
+    font.copyright = "Nolan Locke, https://github.com/Nsl106/8-Bit-Font"
+    font.encoding = "UnicodeFull"
+    font.version = "3.0"
+    font.weight = "Regular"
+    font.em = 1050
+    font.ascent = 750
+    font.descent = 300
+    font.upos = -PIXEL_SIZE  # Underline position
+    font.addLookup("ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),))
+    font.addLookupSubtable("ligatures", "ligatures-subtable")
 
     for character in characters:
         charactersByCodepoint[character["codepoint"]] = character
-        monocraft.createChar(character["codepoint"], character["name"])
-        pen = monocraft[character["name"]].glyphPen()
+        font.createChar(character["codepoint"], character["name"])
+        pen = font[character["name"]].glyphPen()
         width = len(character["pixels"][0]) + 1 if "pixels" in character else 6
         name = character["name"]
 
         image, kw = generateImage(character)
         drawImage(image, pen, **kw)
-        monocraft[name].width = PIXEL_SIZE * width
+        font[name].width = PIXEL_SIZE * width
     print(f"Generated {len(characters)} characters")
 
     outputDir = "../dist/"
     if not os.path.exists(outputDir):
         os.makedirs(outputDir)
 
-    monocraft.generate(outputDir + "Monocraft.ttf")
+    font.generate(outputDir + "8-Bit.ttf")
 
 
 def generateImage(character):
