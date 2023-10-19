@@ -63,6 +63,77 @@
 		"descent": 1
 	},
 	{
+		"character": "€",
+		"name": "euro_sign",
+		"codepoint": 8364,
+		"pixels": [
+			[0, 0, 1, 1],
+			[0, 1, 0, 0],
+			[1, 1, 1, 0],
+			[0, 1, 0, 0],
+			[1, 1, 1, 0],
+			[0, 1, 0, 0],
+			[0, 0, 1, 1]
+		],
+		"descent": 1,
+		"group": ""
+	},
+	{
+		"character": "£",
+		"name": "pound_sign",
+		"codepoint": 163,
+		"pixels": [
+			[0, 0, 1, 1],
+			[0, 1, 0, 0],
+			[1, 1, 1, 0],
+			[0, 1, 0, 0],
+			[1, 1, 1, 1]
+		]
+	},
+	{
+		"character": "¥",
+		"name": "yen_sign",
+		"codepoint": 165,
+		"descent": 1,
+		"pixels": [
+			[1, 0, 0, 0, 1],
+			[0, 1, 0, 1, 0],
+			[0, 0, 1, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0],
+			[1, 1, 1, 1, 1],
+			[0, 0, 1, 0, 0]
+		]
+	},
+	{
+		"character": "©",
+		"name": "copyright_sign",
+		"codepoint": 169,
+		"pixels": [
+			[0, 1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 1, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1, 0]
+		]
+	},
+	{
+		"character": "registered_sign",
+		"name": "®",
+		"codepoint": 174,
+		"pixels": [
+			[0, 1, 1, 1, 1, 0],
+			[1, 0, 0, 0, 0, 1],
+			[1, 0, 1, 1, 0, 1],
+			[1, 0, 1, 0, 0, 1],
+			[1, 0, 1, 0, 0, 1],
+			[1, 0, 0, 0, 0, 1],
+			[0, 1, 1, 1, 1, 0]
+		]
+	},
+	{
 		"character": "%",
 		"name": "percent_sign",
 		"codepoint": 37,
@@ -1156,6 +1227,18 @@
 		]
 	},
 	{
+		"character": " ",
+		"name": "no-break_space",
+		"codepoint": 160,
+		"pixels": [
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0]
+		]
+	},
+	{
 		"character": "¡",
 		"name": "inverted_exclamation_mark",
 		"codepoint": 161,
@@ -1253,6 +1336,88 @@
 			[0, 1, 0],
 			[1, 1, 1]
 		]
+	},
+	{
+		"codepoint": 8211,
+		"name": "en_dash",
+		"pixels": [
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "–"
+	},
+	{
+		"codepoint": 8212,
+		"name": "em_dash",
+		"pixels": [
+			[0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0],
+			[1, 1, 1, 1, 1, 1, 1, 1],
+			[0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "—"
+	},
+	{
+		"codepoint": 8216,
+		"name": "left_single_quotation_mark",
+		"pixels": [
+			[0, 1],
+			[1, 0],
+			[1, 0],
+			[0, 0],
+			[0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "‘"
+	},
+	{
+		"codepoint": 8217,
+		"name": "right_single_quotation_mark",
+		"pixels": [
+			[0, 1],
+			[0, 1],
+			[1, 0],
+			[0, 0],
+			[0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "’"
+	},
+	{
+		"codepoint": 8220,
+		"name": "left_double_quotation_mark",
+		"pixels": [
+			[0, 1, 0, 1],
+			[1, 0, 1, 0],
+			[1, 0, 1, 0],
+			[0, 0, 0, 0],
+			[0, 0, 0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "“"
+	},
+	{
+		"codepoint": 8221,
+		"name": "right_double_quotation_mark",
+		"pixels": [
+			[0, 1, 0, 1],
+			[0, 1, 0, 1],
+			[1, 0, 1, 0],
+			[0, 0, 0, 0],
+			[0, 0, 0, 0]
+		],
+		"group": "general_punctuation",
+		"character": "”"
 	},
 	{
 		"character": "´",
