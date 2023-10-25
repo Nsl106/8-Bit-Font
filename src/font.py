@@ -20,13 +20,18 @@ def generateFont():
     font.fontname = "T9432"
     font.familyname = "T9432"
     font.fullname = "T9432"
-    font.copyright = "Copyright 2023 Nolan Locke, https://github.com/Nsl106/T9432"
+    font.copyright = "Copyright 2023 The T9432 Project Authors (https://github.com/Nsl106/T9432)"
     font.encoding = "UnicodeFull"
     font.version = "1.000"
     font.weight = "Regular"
     font.em = 1350
     font.ascent = 1050
     font.descent = 300
+
+    font.os2_typolinegap = 0
+    font.hhea_linegap = 0
+    font.os2_use_typo_metrics = 1
+
     font.upos = -PIXEL_SIZE  # Underline position
     font.addLookup("ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),))
     font.addLookupSubtable("ligatures", "ligatures-subtable")
