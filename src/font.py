@@ -24,8 +24,8 @@ def generateFont():
     font.encoding = "UnicodeFull"
     font.version = "3.0"
     font.weight = "Regular"
-    font.em = 1050
-    font.ascent = 750
+    font.em = 1350
+    font.ascent = 1050
     font.descent = 300
     font.upos = -PIXEL_SIZE  # Underline position
     font.addLookup("ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),))
