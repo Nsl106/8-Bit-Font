@@ -120,8 +120,8 @@
 		]
 	},
 	{
-		"character": "registered_sign",
-		"name": "®",
+		"character": "®",
+		"name": "registered_sign",
 		"codepoint": 174,
 		"descent": 1,
 		"pixels": [
