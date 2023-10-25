@@ -1699,7 +1699,7 @@
 	},
 	{
 		"codepoint": 8800,
-		"name": "not_ _to",
+		"name": "not_equal_to",
 		"pixels": [
 			[0, 0, 1],
 			[1, 1, 1],
