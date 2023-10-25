@@ -14,9 +14,9 @@ charactersByCodepoint = {}
 
 def generateFont():
     font = fontforge.font()
-    font.fontname = "8-Bit"
-    font.familyname = "8-Bit"
-    font.fullname = "8-Bit"
+    font.fontname = "T9432"
+    font.familyname = "T9432"
+    font.fullname = "T9432"
     font.copyright = "Nolan Locke, https://github.com/Nsl106/8-Bit-Font"
     font.encoding = "UnicodeFull"
     font.version = "3.0"
@@ -44,7 +44,7 @@ def generateFont():
     if not os.path.exists(outputDir):
         os.makedirs(outputDir)
 
-    font.generate(outputDir + "8-Bit.ttf")
+    font.generate(outputDir + "T9432.ttf")
 
 
 def generateImage(character):
