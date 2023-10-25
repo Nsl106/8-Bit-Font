@@ -4,12 +4,15 @@ import os
 
 import fontforge
 
+from generate_diacritics import generateDiacritics
 from polygonizer import PixelImage, generatePolygons
 
 PIXEL_SIZE = 150
 
 characters = json.load(open("./characters.json", encoding="utf8"))
+diacritics = json.load(open("./diacritics.json"))
 
+characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
 def generateFont():
@@ -50,11 +53,27 @@ def generateFont():
 def generateImage(character):
     image = PixelImage()
     kw = {}
-    arr = character["pixels"]
-    descent = -character["descent"] if "descent" in character else 0
-    y = math.floor(descent)
-    kw['dy'] = descent - y
-    image = image | imageFromArray(arr, 0, y)
+
+    if "pixels" in character:
+        arr = character["pixels"]
+        descent = -character["descent"] if "descent" in character else 0
+        y = math.floor(descent)
+        kw['dy'] = descent - y
+        image = image | imageFromArray(arr, 0, y)
+
+    if "reference" in character:
+        other = generateImage(charactersByCodepoint[character["reference"]])
+        kw.update(other[1])
+        image = image | other[0]
+
+    if "diacritic" in character:
+        diacritic = diacritics[character["diacritic"]]
+        arr = diacritic["pixels"]
+        x = image.x
+        y = findHighestY(image) + 1
+        if "diacriticSpace" in character:
+            y += int(character["diacriticSpace"])
+        image = image | imageFromArray(arr, x, y)
 
     return image, kw
 
