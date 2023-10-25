@@ -1480,6 +1480,7 @@
 	{
 		"character": "←",
 		"name": "leftwards_arrow",
+		"group": "mathematical_operators",
 		"codepoint": 8592,
 		"pixels": [
 			[0, 0, 0, 0],
@@ -1504,6 +1505,7 @@
 	{
 		"character": "→",
 		"name": "rightwards_arrow",
+		"group": "mathematical_operators",
 		"codepoint": 8594,
 		"pixels": [
 			[0, 0, 0, 0],
@@ -1562,19 +1564,6 @@
 		],
 		"group": "general_punctuation",
 		"character": "†"
-	},
-	{
-		"codepoint": 8225,
-		"name": "double_dagger",
-		"pixels": [
-			[0, 1, 0],
-			[1, 1, 1],
-			[0, 1, 0],
-			[1, 1, 1],
-			[0, 1, 0]
-		],
-		"group": "general_punctuation",
-		"character": "‡"
 	},
 	{
 		"codepoint": 8226,
@@ -1726,6 +1715,7 @@
 	{
 		"codepoint": 8723,
 		"name": "minus_or_plus_sign",
+		"group": "mathematical_operators",
 		"pixels": [
 			[1, 1, 1],
 			[0, 1, 0],
@@ -1733,7 +1723,6 @@
 			[0, 1, 0],
 			[0, 0, 0]
 		],
-		"group": "mathematical_operators",
 		"character": "∓"
 	},
 	{
