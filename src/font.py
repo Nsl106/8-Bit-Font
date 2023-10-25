@@ -54,6 +54,8 @@ def generateFont():
         os.makedirs(outputDir)
 
     font.generate(outputDir + "T9432.ttf")
+    font.generate(outputDir + "T9432.ufo")
+    font.generate(outputDir + "extra.ufo")
 
 
 def generateImage(character):
