@@ -20,7 +20,7 @@ def generateFont():
     font.fontname = "T9432"
     font.familyname = "T9432"
     font.fullname = "T9432"
-    font.copyright = "Nolan Locke, https://github.com/Nsl106/T9432"
+    font.copyright = "Copyright 2023 Nolan Locke, https://github.com/Nsl106/T9432"
     font.encoding = "UnicodeFull"
     font.version = "1.000"
     font.weight = "Regular"
