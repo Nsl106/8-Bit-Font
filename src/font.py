@@ -4,15 +4,12 @@ import os
 
 import fontforge
 
-from generate_diacritics import generateDiacritics
 from polygonizer import PixelImage, generatePolygons
 
 PIXEL_SIZE = 150
 
 characters = json.load(open("./characters.json", encoding="utf8"))
-diacritics = json.load(open("./diacritics.json"))
 
-characters = generateDiacritics(characters, diacritics)
 charactersByCodepoint = {}
 
 def generateFont():
@@ -24,17 +21,17 @@ def generateFont():
     font.encoding = "UnicodeFull"
     font.version = "1.000"
     font.weight = "Regular"
-    font.em = 1350
-    font.ascent = 1050
-    font.descent = 300
+    font.em = PIXEL_SIZE * 7
+    font.ascent = PIXEL_SIZE * 5
+    font.descent = PIXEL_SIZE * 2
     font.os2_fstype = 0
 
     font.os2_typolinegap = 0
     font.hhea_linegap = 0
     font.os2_use_typo_metrics = 1
 
-    font.hhea_ascent = 1050
-    font.hhea_descent = 300
+    font.hhea_ascent = PIXEL_SIZE * 5
+    font.hhea_descent = PIXEL_SIZE * 2
 
     font.upos = -PIXEL_SIZE  # Underline position
 
