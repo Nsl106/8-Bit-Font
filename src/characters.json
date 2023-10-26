@@ -1227,7 +1227,7 @@
 	},
 	{
 		"character": " ",
-		"name": "no-break_space",
+		"name": "uni00A0",
 		"codepoint": 160,
 		"pixels": [
 			[0, 0, 0],
