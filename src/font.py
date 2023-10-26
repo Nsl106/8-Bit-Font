@@ -30,8 +30,11 @@ def generateFont():
     font.os2_fstype = 0
 
     font.os2_typolinegap = 0
-    font.hhea_linegap = 0
+    font.hhea_linegap = 300
     font.os2_use_typo_metrics = 1
+
+    font.hhea_ascent = 1050
+    font.hhea_descent = 300
 
     font.upos = -PIXEL_SIZE  # Underline position
 
