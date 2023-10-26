@@ -34,8 +34,6 @@ def generateFont():
     font.os2_use_typo_metrics = 1
 
     font.upos = -PIXEL_SIZE  # Underline position
-    # font.addLookup("ligatures", "gsub_ligature", (), (("liga", (("dflt", ("dflt")), ("latn", ("dflt")))),))
-    # font.addLookupSubtable("ligatures", "ligatures-subtable")
 
     for character in characters:
         charactersByCodepoint[character["codepoint"]] = character
