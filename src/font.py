@@ -26,6 +26,8 @@ def generateFont():
     font.descent = PIXEL_SIZE * 2
     font.os2_fstype = 0
 
+    font.os2_typoascent = PIXEL_SIZE * 5
+
     font.os2_typolinegap = 0
     font.hhea_linegap = 0
     font.os2_use_typo_metrics = 1
